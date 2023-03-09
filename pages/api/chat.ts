@@ -34,7 +34,9 @@ const handler = async (req: Request): Promise<Response> => {
     model: 'gpt-3.5-turbo',
     messages: messages,
     temperature: 1,
-    max_tokens: 1000,
+    max_tokens: process.env.AI_MAX_TOKENS
+      ? parseInt(process.env.AI_MAX_TOKENS)
+      : 100,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
