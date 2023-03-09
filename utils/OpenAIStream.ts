@@ -18,7 +18,7 @@ export interface OpenAIStreamPayload {
   top_p: number
   frequency_penalty: number
   presence_penalty: number
-  max_tokens: 3000
+  max_tokens: number
   stream: boolean
   stop?: string[]
   user?: string
